@@ -35,7 +35,7 @@ io.on('connection',(socket)=>{  //socket is that particular connection in whole 
             username , 
             room 
         })
-        
+         
         if(error) {
             return callback(error) //acknowledgement  
         }
@@ -55,7 +55,7 @@ io.on('connection',(socket)=>{  //socket is that particular connection in whole 
 
     // client se server (server recieving an event)
     socket.on('sendMessage',( msg , callback )=>{
-        
+         
         const filter = new Filter()
         if(filter.isProfane(msg)){
             return callback('Profanity is not allowed!')
